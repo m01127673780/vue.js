@@ -1,0 +1,92 @@
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+            <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+            <title> index 7   </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+         </head>
+
+        <body>
+            <div class="container">
+             <script src="https://unpkg.com/vue"></script>
+             <center>
+               <h1 style="color: red">   data binding   7</h1>
+                <div id="app">
+				<!--<h1 id="{{مينفعش كده بهذ الشكل}}"></h1>-->
+				<!--ممكن تضيف اسم ثابت او اتش تى  مع  اى حاجه ى الخصيه مثل وهو بيجمعهم  -->
+				 <h1 v-bind:id="dynamicid+plas"></h1> 
+				<!--<h1 v-bind:اى خاصيه كلاس  اى دى  اى خاصيه مثلاهم نفعل هذه ونعمله بيندا="dynamicid"></h1> -->
+                  <div v-html="msg" >  {{msg}} </div>
+				<!--ممكن  تعمل عمليه حسابيه هو الفيو بيجمع القيم-->
+                  <div> {{10+5}}    </div>
+                  <div> {{x+y}} 	</div>
+                  <div> {{x+10}} 	</div>
+                  <div> {{y-5}} 	</div>
+                  <div> {{multi ()}}</div>
+				<!--بطبعه كما هى فانكشن-->
+				 </div>
+             <!--===================================================-->
+        <script>
+ 		new Vue({
+          el: '#app',
+          data: {
+				  'msg':' <h1>hello World from msg</h1>' ,
+				  'dynamicid':'test-id',
+				  'x':10,
+				  'y':20
+             },
+			'methods':{
+				//طريقه عمل او استخدم ال فانكشن فى فيو 
+			/*'methods عشان نعرفه هنستخدم فانكشن ':{
+ 				  'multi اى اسم للنده عليه  كا فانكشن':function(){*/
+ 				  'multi':function(){
+					  // return
+				  return this.x*this.y;
+  				}
+			}
+         });
+        </script>
+              </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script  	 src="js/vue.js"></script>
+        <script src="js/script.js"></script>
+
+
+
+<!--
+
+//			//بعرف فيو  جديد 
+//        new Vue({
+//			//اى دى او كلاس السلكتور الى هشتغل عليه 
+//          el: '#app',
+//         // elده ايعنى ال عنصر المنت الى هشتغل عليه : '#app ده ال سلكتور الى المختار ',
+//          data : {
+//          //data يعنى دى البيانات  : {
+//              'title':'hello Worled!'
+//              //'title دى  ال اسم الى انا بعرف ال بيه اسم ال فيو عشان اندى عليه فى ال اتش تى ام ال  Html  ':'ده الى هيطبع  hello Worled!'
+//           }
+//         });
+////			و تقدر تعمل اكثر من opject فى الصفحه  
+////			كما هو واضح وموضه فى المثال
+-->
+
+
+
+
+
+
+
+
+
+        </html>

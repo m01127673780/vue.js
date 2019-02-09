@@ -1,0 +1,53 @@
+        <!DOCTYPE html>
+        <html>
+         <head>
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index9  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+         </head>
+         <body>
+            <div class="container">
+             <script src="https://unpkg.com/vue"></script>
+             <center>
+               <h1 style="color: red">9 vue Event object</h1>
+                <div id="app">
+ 				<button v-on:click="showMsg(' cliced!', $event)">show</button>
+  				<div>
+  					x:{{x}} <br>
+  					y:{{y}}<br>
+  					type:{{type}}
+  				</div>    
+            </div>
+             <!--===================================================-->
+       		 <script>
+				new Vue({
+				el: '#app',
+				'data':{
+				'x':0,
+				'y':0,
+				'type':''
+				},
+  				'methods':{  
+				'showMsg':function(mag,event){ 
+ 				this.x = event.clientX;
+ 				this.y = event.clientY;
+ 				this.type= event.type;
+				alert(mag);
+  				 } 
+ 				} 
+ 				});
+              </script>
+              </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script  	 src="js/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html>

@@ -1,0 +1,54 @@
+        <!DOCTYPE html>
+        <html>
+         <head>
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index11  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+         </head>
+         <body>
+            <div class="container">
+             <script src="https://unpkg.com/vue"></script>
+             <center>
+               <h1 style="color: red">11 vue Mobifers event.stopPropagation 
+</h1>
+                <div id="app">
+				<!-- اعرف مثود فى الااسفلل لعمل افنت هوفر-->
+   				<div v-on:mouseover="rect1" style="background :blue; width:200px; height: 200px; color:#fff;"> 
+   				<div v-on:mouseover.stop="rect2" style="background :red; width:100px; height: 100px; color:#fff;"> 
+   					  
+  					 </div>
+  				</div>    
+            </div>
+             <!--===================================================-->
+       		 <script>
+				new Vue({
+				'el':'#app',
+				'methods':{
+				'rect1':function(){
+
+				console.log('shover on rect1');
+				},
+				'rect2':function(event){
+					// فى الفانكشن(event) ونمرار كلمه v-on:mouseover.stopوللاستغناء عن هذا السطر نكتب فوق  
+				//event.stopPropagation(); //امنع الانتشار
+
+				console.log('hover on rect2');
+				}
+				}
+				});
+              </script>
+              </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script  	 src="js/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html>
+         </html>

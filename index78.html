@@ -1,0 +1,119 @@
+   
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+ 
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index78</title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+<!--                <link rel="stylesheet"   href="css/style.css">-->
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+   			<h4  :style="'color:red' ">  78 vueJS  Filters </h4><hr>
+   										       
+ 			<link href="css/style.css"/>
+ 			
+ 			<!-- --> 
+<!--=====================================================================================================================-->
+			
+			<div id="app-test">
+			{{name}}<!-- الطباعه بشكل عادى -->
+			<hr>
+			<h6 style=" color:#00f">
+			toUpperCase() الطباعه بشكل  احرف كبيره  بدون استخدم الفلتر واستخدم الداله العاديه 
+			الى<br>والتحويل من
+			<br> goarbgo  app-test <br>الى
+			<br>------------------------------------------------------------<br>
+			</h6>
+			{{name.toUpperCase()}}<!-- الطباعه بشكل  احرف كبيره -->
+			</div>
+<!--=====================================================================================================================-->
+ 			<!--ولكن فى بعض الاحيان يكون الموضوع اكثر تعقيدا ولكن نحتاج الطبعه تكون مختلفه عن شكله الطبيعى--> <hr>	 		
+			<h4  style=" color:red  ">    vueJS use Filters </h4> <hr>
+			<div id="app">
+			<hr>
+<!--=====================================================================================================================-->
+ 			<h6 	style=" color:#00f">    باستخدم الفلتر   والتحويل الحرف من كبيره وصغيره الى كبيره فقد كما  تلاحظ
+			<br>GoArbgo   <br>الى<br> ------------------------------------------------------------</h6> 
+			{{name | toUpperCase}} <br><!--الطباعه باستخدم الفلتر -->
+			<hr>
+			<h6  style=" color:#00f  "> من الطباعه  المتكراره   باستخدم الفلتر   والتحويل الحرف من كبيره وصغيره الى كبيره فقد كما   تلاحظ
+			<br> GoArbgo <br> ------------------------------------------------------------</h6> 
+			{{name | toUpperCase | dupperCase}}<!-- الطباعه بشكل  احرف كبيره -->
+			<hr>
+<!--=====================================================================================================================-->
+ 			<h6  style=" color:#00f  "> من الطباعه فى اكثرمن مكان باستخدم الفلتر العام  والتحويل الحرف من كبيره وصغيره الى صغيره فقد كما   تلاحظ
+			<br> mOHAMED-ELSayad@gmail.Com6 <br>الى<br> ------------------------------------------------------------</h6>  
+
+			{{email | tolowerCase}}<!-- الطباعه بشكل  احرف كبيره -->
+<!--=====================================================================================================================-->
+ 			</div> 
+			<script type="text/javascript">
+			// طريقه تعريف جلبل فلتر او فلتر عام  للتمكن منه باستخدمه فى اكثر من مكان
+			Vue.filter('tolowerCase', function(value){
+			return value.toLowerCase();
+			});
+ 			new Vue ({
+			'el':'#app',
+			'data': {
+			'name':'GoArbgo', 
+			'email':'mOHAMED-ELSayad@gmail.Com' 
+			},
+			//استخدم   اكثر من مره 
+			'filters': {
+			'toUpperCase': function(value){
+			return value.toUpperCase();	
+			},
+			//استخدم الفلتر 
+			'dupperCase': function(value){
+			return value +'& ' + value;	
+			} 
+			}
+			});	
+			//للطباعه بدون استخدم الفلتر
+ 			new Vue ({
+			'el':'#app-test',
+			'data': {
+			'name':'goarbgo  app-test' 
+			},
+			});
+
+			</script>
+
+          </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html> 
+         
+        
+       
+      
+     
+    
+   
+  
+ 
+
+
+
+
+
+

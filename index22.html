@@ -1,0 +1,81 @@
+
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+<!--<button  @click="active=!active">Togglee</button> --><!--عند الضغط عليه نقوم بعمل تغير للقيمه  من تروى الىفولس-->
+
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index22   </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+ 			 
+				
+         </head>
+         <body>
+            <div class="container">
+<!--			<script src="https://unpkg.com/vue"></script>-->
+			<center>
+  <h1   :style="'color:red' ">22 vue Style Binding</h1>
+ 
+ 			<!-- -->
+
+<div id="app">
+<!-- طريقه اسند استيلا مباشر للعناصر-->
+ <!--   فى حاله تريد الكتابه ال استيل فى نفى السطر على العنصر  تفوم باضفه : قبل كلمه style-->
+  <div   :style="'color:blue' "> Test style</div>
+ <!-- ويمكنك استخدم  طريقه الاخرى بوضع القيمه فى الداتا-->
+ <div   :style="testStyle"> Test style</div>
+<!--طريقه اسند استيلا  من خلال اوبجكت والكتابه مباشر-->
+ <div   :style="{color: 'red'}"> Test style</div>
+<!--      وممكن من خلل متغير كما هو موضح بالمثال التالى-->
+ <div   :style="{color:color}"> Test style</div>
+ <!--  ويمكنك استخدم  طريقه الاخرى بوضع القيمه  ابجكتوضح بالمثال التالى-->
+ <div   :style="[testObj, testObj2, {'font-size':size + 'px'}]"> Test style</div>
+ <button  @click="size++">+one1 </button>  <!-- ++ بكسل عند الضغط عليه يقوم بعمل تغير للقيمه الفونت  ويزد 1 px-->
+ 
+ <button  @click="size--"> - one1</button>  <!-- -- بكسل عند الضغط عليه يقوم بعمل تغير للقيمه الفونت  ويزد 1 px-->
+
+</div>
+<!--=============================css====================-->
+<!--
+<style>
+.rect{ height:100px; width: 100px;}
+.blue{background: blue; }
+.red{background: red;} 
+</style>
+-->
+<!--=============================js======================-->
+<script type="text/javascript">
+new Vue({
+'el':'#app',
+'data':{
+        testStyle:'color:blue' ,
+	    testObj:{color:'yellow'},
+	    testObj2:{'font-size':'20px'},
+		color:'red',
+ 	    size: 130
+  } 
+
+});
+</script>
+           
+               </center>
+            </div>
+        </body>
+      
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html>
+ 

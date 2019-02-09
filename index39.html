@@ -1,0 +1,94 @@
+  
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+<!--=============================css====================-->
+<!--
+<style>
+.error{ height:100px; width: 100px;}
+.blue{background: blue; }
+.red{background: red;} 
+</style>
+-->
+<!--=============================js======================-->
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index39  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+  			<h1   :style="'color:red' ">39templt </h1>
+  			
+			<!--مثال  عن التقيم بالنجوم  -->
+			<link href="css/style.css"/>
+
+<section class="todoapp">
+   <header class="header">
+    <h1>todos</h1>
+    <input class="new-todo"
+      autocomplete="off"
+      placeholder="What needs to be done?">
+  </header>
+  <section class="main" >
+     
+    <ul class="todo-list">
+      <li class="todo " v-for="todo in todos" :class="{completed:todo.completed}">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+           <button class="destroy"@click="deletTodo(todo)"></button>
+
+         </div>
+        <input class="edit" type="text">
+      </li>
+    </ul>
+  </section> 
+</section>
+<footer class="info">
+  <p>Double-click to edit a todo</p>
+</footer>
+  			<script type="text/javascript">
+			new Vue({
+			'el':'.todoapp',
+			data:{
+				todos:[
+				{title:'test 1', completed:true},
+				{title:'test 2', completed:false},
+				]
+ 			},
+				methods:{
+				deletTodo:function(todo){
+				this.todos.splice(this.todos.indexOf(todo), 1);
+			 }
+			}
+			});
+			</script>	
+ <style>
+	 .completed{
+		 
+	 }		
+</style>
+             
+             </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

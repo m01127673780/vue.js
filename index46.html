@@ -1,0 +1,87 @@
+  
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+<!--=============================css====================-->
+<!--
+<style>
+.error{ height:100px; width: 100px;}
+.blue{background: blue; }
+.red{background: red;} 
+</style>
+-->
+<!--=============================js======================-->
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index46  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+  			<h1   :style="'color:red' ">46 Components</h1>
+  			
+			<link href="css/style.css"/>
+
+			<!--مثال  طريقه انشاء كمبوننت  -->
+
+			<div id="app">
+			<!--//الطريقه الاولى-->
+			<product>{{name}}</product>
+			<!--الطريقه الثانيه-->
+			<product>product 1</product>
+			<product>product 2</product>
+			<product>product 3</product>
+			</div>
+
+			<script type="text/javascript">
+			//-مثال  طريقه انشاء  Components
+			Vue.component('product', {
+			//ثم تضيف داتا ولكن يجب ان تكون عباره عن فانكشن بدل من  اوبجكت
+			//الطريقه الاولى
+			//template اجبارى: '<div  التاج الزى تريد ان يظهار فى الل اتش تى ام ال>{{  name اسم الرترن}}</div التاج الزى تريد ان يظهار فى الل اتش تى ام ال>',
+			template: '<div>{{name}}</div>',
+			//الطريقه الثانيه
+			//<product>product 1</product>فى حاله تريد ان تكتب ال  السم نم فى الاعلى   ذالك تضيف تاج صلت كما هو موضح وتكتب فى الاعلى ما تييد  مث هذا
+			template: '<h1><slot></slot></h1>',
+			data: function (){
+			return{
+ 			}
+			}
+			});
+
+			new Vue({
+			'el':'#app',
+			data:{
+
+			},
+
+			});
+			</script>	
+ <style>
+	 .completed{
+		 
+	 }		
+</style>
+             
+             </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

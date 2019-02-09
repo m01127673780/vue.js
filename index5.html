@@ -1,0 +1,134 @@
+  
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+<!--=============================css====================-->
+<!--
+<style>
+.error{ height:100px; width: 100px;}
+.blue{background: blue; }
+.red{background: red;} 
+</style>
+-->
+<!--=============================js======================-->
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index50  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+ 		 
+  			<h1   :style="'color:red' ">52 vueJS  استحدم المكونات بشكل متدخل </h1>
+  			
+			<link href="css/style.css"/>
+	<!--
+			<div id="app">
+			     
+			   
+			<product :product-data="product" ></product>		
+			<hr>			
+			<user :user-data="user" ></user>					
+ 			 
+			<script type="text/javascript">
+			Vue.component('product',{
+			'template':'<div><h1>#{{productData.id}} {{productData.name}}</h1></div>',
+			props:{
+			'productData':{},
+			}
+			});
+			Vue.component('user',{
+			'template':'<div> <img :src="userData.image" alt=""/><h3> {{userData.name}}</h3>'+
+				'<user :user-data="productData.user" ></user></div>',
+			props:{
+			'userData':{},
+			}
+			});
+			new Vue({ 
+			'el': '#app',
+			'data': { 
+			product: { 
+					id:1,
+					name:'product 1',
+			user:{
+					name: 'MOhamed',
+					image:'http://مركز-صيانة-الكتروستار.com/wp-content/uploads/2018/04/5-1-213x300.jpg'
+				}	
+			 },
+				user:{
+					name: 'MOhamed',
+					image:'http://مركز-صيانة-الكتروستار.com/wp-content/uploads/2018/04/5-1-213x300.jpg'
+				}
+			}
+			});
+			</script>
+
+  <style>
+	 .completed{     
+ 	 }		
+</style>
+              </center>
+              
+            </div>
+            -->
+			<div id="app">
+			<product :product-data="product"></product>
+			<hr>
+			<user :user-data="user"></user>
+			</div>
+
+			<script type="text/javascript">
+			Vue.component('product',{
+			'template': '<div><h1>#{{productData.id}} {{productData.name}}</h1> ' +
+			'<user :user-data="productData.user"></user> </div>',
+			props:{
+			'productData':{},
+			}
+			});
+
+			Vue.component('user',{
+			'template': '<div><img :src="userData.image"><h3>{{userData.name}}</h3></div>',
+			props:{
+			'userData':{},
+			}
+			});
+
+			new Vue({
+			'el':'#app',
+			'data': {
+			product:{
+			id: 1,
+			name: 'Product 1',
+			user:{
+			name: 'Bashir',
+			image: 'https://1.gravatar.com/avatar/1'
+			}
+			},
+			user:{
+			name: 'Bashir',
+			image: 'https://1.gravatar.com/avatar/1'
+			}
+			}
+			});
+			</script>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

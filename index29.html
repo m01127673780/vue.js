@@ -1,0 +1,106 @@
+  
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+<!--=============================css====================-->
+<!--
+<style>
+.rect{ height:100px; width: 100px;}
+.blue{background: blue; }
+.red{background: red;} 
+</style>
+-->
+<!--=============================js======================-->
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index29   </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+<!--			<script src="https://unpkg.com/vue"></script>-->
+			<center>
+  			<h1   :style="'color:red' ">29 vue    استخدم v-if مع الv-for</h1>
+
+			<div id="app">
+ 
+
+			<div v-for="item in list2" v-if="item.age > 10" > <!--استخدم العمر مع كامل العنصر الى عمره امبر من 10-->
+			<span>Name: {{item.name}} </span>
+			<span >Age:: {{item.age}} </span>
+			</div> 
+			<hr>
+			
+			<div v-for="item in list2"  > 
+			<span>Name: {{item.name}} </span>
+			<span v-if="item.age > 10">Age:: {{item.age}} </span> <!--استخدم  العنصر مع العمر فقد-->
+			</div> 
+			<hr>
+			
+			<div v-for="item in list2" v-if="index < 2" > <!--  اول عنصرين فقد10-->
+			<span>Name: {{item.name}} </span>
+			<span >Age:: {{item.age}} </span>
+			</div> 
+			<hr>
+			
+			
+			<div v-for="(item,index) in list2"> 
+			<h3>#{{index + 1}}</h3><!-- استخدم الترتيب # الرقم  ضيف عليه 1 كى يبد ال اندكس من 1 وليس ال 0  -->
+			<!--  input باضفه انبت يكون قد حصلت على القيمه  ولكن سمكنك التعديل عليه من خلال -->
+			<!--  هذكل ما عليك فعلاه  لتتتمكن وتستطيع من التعديل على ال القيمه  وتجعلاه متغيره   v-model="item.name" الى {{item.name}} كما تلاحظ تم استبدل الكود من-->
+			<div>Name: <input  style="width: 50%"   v-model="item.name"></div>
+			<div>Agee:  <input  style="width: 50%"  v-model="item.age"> </div>
+			<!--  وسنقوم بارسل ال اندكس الذى نريد حذفه deleteItem عند الضغط نقوم باستدعاء داله 
+			@click="  دى داله للحذف ستعتمد عليه فى السفل deleteItem( الرقمindex)   و كما تلاحظ   لقيم بعمليه الحذف  تكتب     -->
+
+			<button @click="deleteItem(index2)">Delete This</button>
+			<br> 
+			</div><!-- v-for = item in list2 -->
+			</div>
+
+			<script type="text/javascript">
+			new Vue({
+			'el':'#app',
+			'data':{ 
+			 
+			list2:[
+			{name:'Mohamed',age:10},
+			{name:'Saeed' , age:12},
+			{name:'Elsayad', age:13},
+			]
+			},
+			'methods':{
+			addItem:function(){
+			this.list.push(this.newVal);
+			this.newVal = '';
+			},
+			//عباره عن فانكشن ونضيف برمتر اندكس 
+			// اسم الفانكشن:function(اسم البرمتر)
+			deleteItem: function(index2){
+			//thisهذا.list2 اسم المصفوفه.splice دى داله فى ال فيو(  ,,index2عداد الحذف 1,اسم البرمتر) //;
+			this.list2.splice(index2, 1);
+			}
+			}
+			});
+			</script>
+               
+            </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html>

@@ -1,0 +1,60 @@
+         <!DOCTYPE html>
+        <html>
+         <head>
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index18  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+         </head>
+         <body>
+            <div class="container">
+			<script src="https://unpkg.com/vue"></script>
+			<center>
+			<h1 style="color: red">18 vue computed</h1>
+
+			<div id="app">
+			<!-- لطباعه الاسم كامل     -->
+				<br>
+			<input v-model ="first_name">
+			<input v-model ="test">
+			<br>
+			<br>
+			<!-- دى فانكشن موجوده فى ال فيو  تحسب اتاريخDate.now() </div>-->
+			<!--للطباعه ممكن يكون بالشكل ده او استخدم الكمبيتد مثل المثال الثانى -->
+ 			<div> {{first_name+''+last_name+' '+Date.now()}}</div>
+ 			<br>
+<!--الطباعه بااستخدم ال كمبيتد-->
+ 			{{full_name }}  
+			<!--  -->
+			<!--<button  @click="x = 'x was changed'">change</button> -->
+			</div> 
+			<!--=============================	======================-->
+			<script type="text/javascript">
+			new Vue({
+			'el':'#app',
+			'data':{
+			first_name:'Mohamed',
+			last_name:'Elsayd',
+			test:'test'
+			} ,
+			'computed':{
+				full_name:function(){
+					return this.first_name +''+this.last_name +' '+Date.now();
+				}
+			}
+			});
+			</script>
+               </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script  	 src="js/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html>
+  

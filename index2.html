@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title> الدرس الثانى </title>
+
+	<link rel="stylesheet"   href="css/bootstrap.min.css">
+		<link rel="stylesheet"   href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+ </head>
+
+<body>
+	<div class="container">
+
+        <script src="https://unpkg.com/vue"></script>
+	 <center>
+        <div id="app">
+            {{name}} <br><br><br><br>
+           
+           
+            
+              <hr>
+            <ul>
+                <li v-for="item in list">
+                    {{item}}
+                    <button v-on:click="deleteItem(item)">-</button>
+                </li>
+
+                <li v-if="newItem">{{ newItem }}</li>
+            </ul>
+
+            <input v-model="newItem">
+
+            <button v-on:click="addNew()">Add</button>
+             
+        </div>
+        </center>
+</div>
+<!--===================================================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--===================================================-->
+<script>
+ 
+new Vue({
+  el: '#app',
+  data: {
+  	name: 'الدرس الثانى  ',
+    list: ['Apple', 'Orange', 'Lemon'],
+    newItem:'',
+  },
+  methods: {
+  	addNew: function(){
+    	this.list.push(this.newItem);
+      this.newItem = '';
+    },
+    deleteItem: function(item){
+    	var index = this.list.indexOf(item);
+      this.list.splice(index, 1);
+    }
+  }
+})
+</script> 
+ 	 
+</body>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+<script  	 src="js/vue.js"></script>
+<script src="js/script.js"></script>
+
+
+    
+
+
+
+
+
+
+        
+              
+
+
+
+</html>

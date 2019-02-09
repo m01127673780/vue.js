@@ -1,0 +1,110 @@
+   
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+ 
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index78</title>
+
+            <link rel="stylesheet"href="css/bootstrap.min.css">
+<!--                <link rel="stylesheet"   href="css/style.css">-->
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+ 			               <link href="css/style.css"/>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br><!-- --> 
+  			
+<h4   style=" color:red  ">  vueJS 80   Custom Directves</h4><hr>
+<!--  Directves هو سلوك معين يوضع للاستخدم اتربيت معين ويسمى ديركتف-->
+<!--  فى بعض الاحيان -->  	 
+			<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+<div class="alert alert-secondary" role="alert">
+  A simple secondary alert—check it out!
+</div>
+<div class="alert alert-success" role="alert">
+  A simple success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  A simple warning alert—check it out!
+</div>
+<div class="alert alert-info" role="alert">
+  A simple info alert—check it out!
+</div>
+<div class="alert alert-light" role="alert">
+  A simple light alert—check it out!
+</div>
+<div class="alert alert-dark" role="alert">
+  A simple dark alert—check it out!
+</div>
+		<div id="app">
+		<!-- <button v-on:click.stop="val"=1></button>-->
+		<!-- <button  تمثل ال ديركتفv-on: عباره عن ارجومنتclick. مودفيرزstop=" القيمقval"=1></button>-->
+		<!--ممكن استخدمه مع اى عنصر ان كان-->
+		<!--  باضافه بردر-->
+		<div v-color.border="'green'"> Div- test  </div>
+		<p v-color:bg.border="'red'">     P- test     </p>
+		<p v-color:bg.border="'red'">  P- test     </p>
+		</div> 
+ 		<script type="text/javascript">
+		// ديركتف عام يمكنك ال استخدم  فى اكثر من مكان 
+ 		// Vue.directive (' اسم الديركتف color');
+		Vue.directive ('color', {
+		inserted(el, binding){
+		//		console.log(el); //   كيفه يمككنك ان تجعل الون الخضر لون متغير ويويختلف من عنصر لعنصر اخر على حسب الطلب   
+		//		    وحد #ستقوم بوضع اوبجكت
+		if(binding.arg =='bg'){
+		el.style.backgroundColor = binding.value;	
+ 		}
+		if (binding.modifiers.border){
+		el.style.borderColor =binding.value;
+		el.style.borderStyle ='dashed';
+		}	
+		//معلجه ال ؤجيومنت 
+		} 
+		});
+		new Vue ({
+		'el':'#app',
+		'data': {
+		' ':' ' 
+		},
+		});
+		</script>
+             </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html> 
+         
+        
+       
+      
+     
+    
+   
+  
+ 
+
+
+
+
+
+

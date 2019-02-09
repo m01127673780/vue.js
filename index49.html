@@ -1,0 +1,74 @@
+  
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+<!--=============================css====================-->
+<!--
+<style>
+.error{ height:100px; width: 100px;}
+.blue{background: blue; }
+.red{background: red;} 
+</style>
+-->
+<!--=============================js======================-->
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index49  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+  			<h1   :style="'color:red' ">49 طريقه انشاء الخصائص  فى الكمبوننات </h1>
+  			
+			<link href="css/style.css"/>
+
+<div id="app">
+<!--  وتقوم باضافه علامه : كى يكون الناتج رقم وليس نص-->
+<product name ="product 1" :price="price" product-category="cat 1"></product>					
+<product name ="product 2" :price="250"></product>					
+<product name ="product 3" :price="350"></product>
+
+<product v-for="product in products"  :name ="product.name" :price="product.price" :product-category="product.cat"></product>					
+<script type="text/javascript">
+Vue.component('product',{
+	'template':'<div><h1>{{name}}</h1>{{price}} {{productCategory}}</div>',
+	props:['name','price','productCategory']
+});
+new Vue({ 
+'el': '#app',
+	'data': { 
+	price: 100,
+		products:[
+ 		{'name':'p1', 'price': 100, 'cat': 'cat:1'},
+		{'name':'p2', 'price': 150, 'cat': 'cat:2'},
+		{'name':'p3', 'price': 170, 'cat': 'cat:3'},
+		]
+	}
+});
+</script>
+  <style>
+	 .completed{     
+ 	 }		
+</style>
+              </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

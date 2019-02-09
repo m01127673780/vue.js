@@ -1,0 +1,66 @@
+   
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+ 
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index55  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+<!--                <link rel="stylesheet"   href="css/style.css">-->
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+   			<h1   :style="'color:red' ">60 vueJS Dynamic components  </h1>
+  			
+			<link href="css/style.css"/>
+			
+			<!--عند تريد تبديل كمبونانت بتبديل كمبونان تانى -->
+			<div id="app">
+
+			<!--  كمبونانت  وهنا على سبيل المثال  امامك مكان وحد لكتابه ا الكمبوننات -->
+			<!--				<component is="first-component"> </component>-->
+			<!--				لتقوم بتغير هذا الكمبونانات بشكل دينمك  تقوم بعمل زرا كماا هو وضه فى المثال -->
+			<!--			 	<component is="second-component"> </component>-->
+			<button @click="activeComp = 'first-component' ">first</button>
+			<button @click="activeComp = 'second-component' ">second</button>
+			<!--يتم استبدل الكمبونان على حسب المتغير-->
+
+			<component :is="activeComp"> </component>
+
+			</div>
+			<script type="text/javascript">
+			Vue.component('first-component', {
+			'template': '<div> First component </div>' 
+			})	
+			Vue.component('second-component', {
+			'template': '<div> toot component </div>' 
+			})
+			//تقوم  بتعريف متغير فى الدتا فى الفيو انستنس
+			new Vue ({
+			'el':'#app',
+			data:{
+			'activeComp': 'first-component'
+			}
+			});
+			</script>
+          </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

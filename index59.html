@@ -1,0 +1,75 @@
+   
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+ 
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index55  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+<!--                <link rel="stylesheet"   href="css/style.css">-->
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+   			<h1   :style="'color:red' ">59 vueJS  </h1>
+  			
+			<link href="css/style.css"/>
+
+			<div id="app">
+			<my-component>
+			<div slot="header">
+			<h1>h1 Custom Header h1</h1>
+			Custom Header
+			</div>
+			main
+			<div slot="footer">Custom footer</div>
+			
+			</my-component> 
+			</div>
+			<script type="text/javascript">
+			Vue.component('my-component',{
+			//slot فى حاله تريد طبعه قيمه افترضيه تكتب القيمه بين تاج اصلت
+			// 'طريقه كتابه نص استرنج   على اكثر من سطر فى الjavaScript 
+			/*
+			1 ''+
+			//cood
+			''
+			2' 
+			فى  هذا الطريقه وضع / علا بك اسلاش فى نهايه كل سطر /
+			'
+			فى  هذا الطريقه وضع بكتك العلامه الى فى حرق ال `ذ `` /
+			`   
+			//cood   ملاحظه هامه فى بعض المتصفحات لا تعمل طريقه البكتك
+			`
+			*/
+
+			//اذ  ارات ان تكتب ا اسم فى العنصرheader name="header"
+
+			'template' :	' <div>'+
+			<header ><slot name="header">Header Defult Content</slot></header>
+			<main><slot> main----Default content</slot></main>
+			<footer><slot name="footer">footer Defult Content</slot></footer>
+			'</div>'	
+			})
+			</script>
+        
+         </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

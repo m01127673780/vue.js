@@ -1,0 +1,57 @@
+  
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+ 
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index55  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+<!--                <link rel="stylesheet"   href="css/style.css">-->
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+   			<h1   :style="'color:red' ">58 vueJS  </h1>
+  			
+			<link href="css/style.css"/>
+
+<div id="app">
+<my-component>
+<!--	بد ون قيمه الفترضيه-->
+<!--  فى الاسلط slot نكتب فى المنتصف      -->
+	test Slot conent
+<!--slot القيمه التى تريد كتابته    بين تاج اصلت-->
+  </my-component>
+<my-component></my-component><!--	بالقيمه الفترضيه-->
+</div>
+		<script type="text/javascript">
+		Vue.component('my-component',{
+			//slot فى حاله تريد طبعه قيمه افترضيه تكتب القيمه بين تاج اصلت
+		'template' :'<div> test <br/><slot>default slot conent</slot></div>'
+		})
+		new Vue({
+			'el':'#app',
+			data: {
+			} 
+		});
+		</script>
+         </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

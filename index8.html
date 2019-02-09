@@ -1,0 +1,84 @@
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+            <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+            <title> index 8  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+         </head>
+
+        <body>
+            <div class="container">
+             <script src="https://unpkg.com/vue"></script>
+             <center>
+               <h1 style="color: red">8 vue Event handilng</h1>
+                <div id="app">
+				<!-- ازى بقى تضيف  برمتر لل  فانكشن بتعتك بص يا سيدى -->
+								 <button v-on:click="showMsg(' From  function with parametertest!')">button alert</button>
+								 <hr>
+								<!-- بهذا الفانكشن البسيط تجع الزرا كا عداد كل كلك عله يزود وحد او العدد الى انت عططي له -->
+								 <button  v-on:click="counter++ ">Add counter </button>
+				<!--<button v-on:click="showMsg('test!هتكتب هنا لى نفسك فيه وعايز تطبعه )">button</button>-->
+				<!--<button التاج  v-on:click بعد كده =" ثم اسم الفانكشن الى انت مسميه showMsg()">button</button>-->
+				
+            								 <div>{{counter}}</div>
+										 </div>
+             <!--===================================================-->
+       		 <script>
+				new Vue({
+				el: '#app',
+				'data':{
+					 'counter':0
+				},
+				//طبعا مش عايزين نقول انك لزم  بتكتب كلمه  مثودس وبتفتح قوس الاول 
+ 				'methods':{  
+				'showMsg':function(mag){ 
+				//'showMsg':function(mag هنا تكتب اسم معبر عن العمليه ){ 
+				// alert(mag وهنا هتممرها جو ه كا برمتر);
+				 alert(mag);
+				}
+ 				} 
+				 
+				});
+              </script>
+              </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script  	 src="js/vue.js"></script>
+        <script src="js/script.js"></script>
+ 
+<!--
+
+//			//بعرف فيو  جديد 
+//        new Vue({
+//			//اى دى او كلاس السلكتور الى هشتغل عليه 
+//          el: '#app',
+//         // elده ايعنى ال عنصر المنت الى هشتغل عليه : '#app ده ال سلكتور الى المختار ',
+//          data : {
+//          //data يعنى دى البيانات  : {
+//              'title':'hello Worled!'
+//              //'title دى  ال اسم الى انا بعرف ال بيه اسم ال فيو عشان اندى عليه فى ال اتش تى ام ال  Html  ':'ده الى هيطبع  hello Worled!'
+//           }
+//         });
+////			و تقدر تعمل اكثر من opject فى الصفحه  
+////			كما هو واضح وموضه فى المثال
+-->
+
+
+
+
+
+
+
+
+
+        </html>

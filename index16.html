@@ -1,0 +1,52 @@
+        <!DOCTYPE html>
+        <html>
+         <head>
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index16  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+         </head>
+         <body>
+            <div class="container">
+             <script src="https://unpkg.com/vue"></script>
+             <center>
+               <h1 style="color: red">16 vue once</h1>
+
+				<div id="app">
+				<!--  ويكون ايضاء جميع الابناء لهذا العنصر ياخذو
+				نفي ال خاصيه كما هو موضح بالمثال اسفلv-once نريد تثبيت قيمه معينه حتى لو تم تغيره فى الداتا-->
+				<div v-once>
+				:العنصرقيمه ثابته {{counter}}
+				<div> :العنصرالا بن  {{testv}}</div>
+				</div>
+				<!-- يتم تكراره مره ثانيه لكن بدون v-once-->
+				<div> {{counter}}</div>
+				<div> {{testv}}</div>
+				<!--عند الضغط على ال عداد زود 1 اةو القيمه الى انت عايزه-->
+				<button @click="counter++;testv++">Add1</button>
+				</div> 
+				<!--=============================	======================-->
+				<script type="text/javascript">
+				new Vue({
+				'el':'#app',
+				'data':{
+				counter: 5,
+				testv:10
+				} 
+				});
+				</script>
+               </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script  	 src="js/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html>
+         </html>
+ 

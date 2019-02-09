@@ -1,0 +1,84 @@
+  
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+<!--=============================css====================-->
+<!--
+<style>
+.error{ height:100px; width: 100px;}
+.blue{background: blue; }
+.red{background: red;} 
+</style>
+-->
+<!--=============================js======================-->
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index55  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+<!--                <link rel="stylesheet"   href="css/style.css">-->
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+   			<h1   :style="'color:red' ">55 vueJS  </h1>
+  			
+			<link href="css/style.css"/>
+			<!-- التطبيق عباره عن  زر وعن الطضط عليه يزيد كل مره ب 1  والمطلوب عمله على هيه كمبونان-->
+			<div id="app">
+	{{changeTimes}} <br>
+	<button-counter v-on:increament="count" :value="3"></button-counter>
+	<button-counter v-on:increament="count"></button-counter>
+</div>
+
+<script type="text/javascript">
+	Vue.component('button-counter', {
+		template: '<button @click="increament()">{{counter}}</button>',
+		data: function(){
+			return {
+				counter: this.value
+			}
+		},
+		props:{
+			value: {
+				default:0
+			}
+		},
+		methods:{
+			increament:function(){
+				this.counter ++;
+				this.$emit('increament');
+			}
+		}
+	});
+
+	new Vue({
+		'el':'#app',
+		data: {
+			changeTimes:0
+		},
+		methods: {
+			count: function(){
+				this.changeTimes ++;
+			}
+		}
+	});
+</script>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

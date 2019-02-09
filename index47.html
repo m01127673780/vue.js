@@ -1,0 +1,100 @@
+  
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+<!--=============================css====================-->
+<!--
+<style>
+.error{ height:100px; width: 100px;}
+.blue{background: blue; }
+.red{background: red;} 
+</style>
+-->
+<!--=============================js======================-->
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index47  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+  			<h1   :style="'color:red' ">47 امور يجب علييك اتباعه</h1>
+  			
+			<link href="css/style.css"/>
+
+			<!-- امور يجب علييك اتباعه
+			
+			  
+			    1فى كل مره تعرف فيه كمبونات  قبل ال فيو انستتنس الخاصه بالتطبيق 
+		        2 يجب ان تكون باحرف صغيره ولا تحتوى على اى مسافه ممكن -علامه
+				ممكن تسجيل الكمبوننات فى  ال لكل3 
+			        		        -->
+
+		<div id="app">
+		<product-list></product-list><!-- الكمبونانت بى شكل عام -->
+		<tag></tag>					 <!-- الكمبونانت بى شكل خاص -->
+		</div>
+		<product-list></product-list><!-- الكمبونانت بى شكل عام -->
+
+		<script type="text/javascript">
+		//فى كل مره تعرف فيه كمبونات  قبل ال فيو انستتنس الخاصه بالتطبيق  ثم تقوم بكتابه اسم لهذا الكمبوننات  وبعد كده ,فصله ثم تضيف بعض البرمترا الاخرى 
+		//2لازم الكمبونانت   ميكونش فى  اسمه مسفات  يكون علامه - ممكن كما هو موضح بالمثال
+		Vue.component('product-list', {
+		//اول برمتر تمبلت وده اجبارى ثم تكتب التاج الى انت عايزه 
+		'template': '<div>Product component: {{name}}</div>',//هناء نطبع ال ابجكت
+		//الداتا لزم تكون فانكشن تعيد هذا ال ابجيكت 
+		data: function(){
+		return {
+		//هذا هو البجكت 
+		name: 'P1'
+		}
+		}
+		});
+
+		new Vue({
+		'el':'#app',
+		//الكمبونانت بى شكل خاص 
+		'components': {
+		'tag': {
+		'template': '<div>Tag: {{name}}</div>',
+		data: function(){
+		return {
+		name: 'Top'
+		}
+		}
+		}
+		},
+		data:{
+		'name': 's'
+		},
+		});
+		</script>
+
+ <style>
+	 .completed{
+		 
+	 }		
+</style>
+             
+             </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

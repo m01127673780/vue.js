@@ -1,0 +1,81 @@
+  
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+<!--=============================css====================-->
+<!--
+<style>
+.error{ height:100px; width: 100px;}
+.blue{background: blue; }
+.red{background: red;} 
+</style>
+-->
+<!--=============================js======================-->
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index50  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+  			<h1   :style="'color:red' ">50 التحقق من خصائص المكونات </h1>
+  			
+			<link href="css/style.css"/>
+
+<div id="app">
+<!--  وتقوم باضافه علامه : كى يكون الناتج رقم وليس نص-->
+<product name ="product 1" :price="100" product-category="cat 1"></product>					
+<product name ="product 2"  product-category="cat 2"></product>	
+
+<!--<product name ="product 3" :price="350"></product>-->
+
+<product v-for="product in products"  :name ="product.name" :price="product.price" :product-category="product.cat"></product>					
+<script type="text/javascript">
+Vue.component('product',{
+'template':'<div><h1>{{name}}</h1>{{price}} {{productCategory}}</div>',
+props:{
+'name':{},
+//type:Numberكيفيه وضح تحقق من السعر رقم
+//وفيه حاله اعطاء قيمه افترضيه  للسعر مثلا default:0
+//وفيه حاله  تريد تحديد السعر لا يمكن  ان يكون اقل من ؟ كذ validator: function(value){return value >= 0;
+
+'price':{type:[Number] , default:0,validator: function(value){
+return value >= 0; //رجعلى القيمه  الى فى الفليو وسوفها اكبر من او = 0 
+}},
+'productCategory':{required:true}//فى حاله ان كانت الخاصيه مطلوبه 
+}
+});
+new Vue({ 
+'el': '#app',
+'data': { 
+
+}
+});
+</script>
+ 
+  <style>
+	 .completed{     
+ 	 }		
+</style>
+              </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

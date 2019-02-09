@@ -1,0 +1,70 @@
+   
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+ 
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index74</title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+<!--                <link rel="stylesheet"   href="css/style.css">-->
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+   			<h4  :style="'color:red' ">  74 vueJS  input  Modifiers <br>  v-model   طريقه معرفات  عمل </h4><hr>
+   										       
+ 			<link href="css/style.css"/>
+ 			
+ 				<!--  v-model   طريقه معرفات  عمل  -->
+			<div id="app">
+<!--ملاحظه هاااامه لا تستخدم اسما محجوزه فى التسمه مثل  فار var  وغيره -->
+								   <label>v-model باستخدم</label>  <br> <input type="text" v-model="val" > <br>
+			<!--طريقه الكتابه بدون استخدم  v-model -->
+			<!--<label>بدون</label>  <input type="text" :value="val" >--><!-- ستلاحظ عند استخدم   هذا سيتم اسناد القيمه اليه ولا  اكن لا يمكنك من التحديث عليه والتغير فيه-->
+			<!--فى وبى هذا الطريقه سيتم اسناد  القيمه والتغر فيه من خلال ال انبيت -->
+			<!-- :value="val" @change="val=$event.target.value" معنى هذاءالكود انك يتقوله القيمه بتعتك هى القيمه التى توجد فى ال انبيت  وسيتم التعديل والتحديث  بعد الخروج من ال انبيت --> 
+			
+			 <br><hr>
+ 			<label>  v-model  with lazy  modifier باستخدم</label>  <br> <input type="text" v-model.lazy="val" > <br>
+ 			<label>  data bind with  @change      باستخدم</label>  <br> <input type="text" :value="val" @change="val=$event.target.value"><!-- سيتم التعديل والتحديث بعد الخروج من ال انبيت--> <br><hr>
+  			<label> v-model    (one modifires)    باستخدم</label> <br>  <input type="text" v-model="val" > <br>
+ 			 <!--وهذا تقابل  ال ف  داش مودل  العاديه -->    <!-- 	سيتم التعديل والتحديث اثناء الخروج من ال انبيت-->
+			<label> data bind with @input         باستخدم</label>  <br> <input type="text" :value="val" @input="val=$event.target.value">    
+
+<br>
+<br>
+<!-- @change = v-model.lazy   ممكن نعتبر ان -->
+<!--					 <br>-->
+
+			</div> 
+			<script type="text/javascript">
+				
+			new Vue ({
+			'el':'#app',
+			'data': {
+			'val': 'test' 
+  			}
+			});
+				
+			</script>
+
+          </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html> 

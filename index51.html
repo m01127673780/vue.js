@@ -1,0 +1,93 @@
+  
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+<!--=============================css====================-->
+<!--
+<style>
+.error{ height:100px; width: 100px;}
+.blue{background: blue; }
+.red{background: red;} 
+</style>
+-->
+<!--=============================js======================-->
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index50  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+ 		 
+  			<h1   :style="'color:red' ">51 vueJS pass objects </h1>
+  			
+			<link href="css/style.css"/>
+
+			<div id="app">
+			<!--productData وهنا لا يجب عليك كتابه  هاكذ والسبب لا ان ال  اتش تى ام ال لا يتعرف على هذا الطريقه
+			لنه لا فرق بين الحروف ال كبيره والصغيره فا  يجب عليك والزم ان تضعه  وتكتبه هذ الشكل كما هو واضح فى المثال اسفل  -->
+			<product :product-data="product" ></product>					
+			<product :product-data="product2" ></product>
+			<!--طريقه عمل الوب التكرار على المصفوفه-->
+			<product v-for=" item in products" :product-data="item" ></product>					
+			<!--//    يجب هليك عمل اوبجكت فى حاله ان يوجد الكثير من الخصائص  -->
+			<script type="text/javascript">
+			Vue.component('product',{
+			'template':'<div><h1>#{{productData.id}} {{productData.name}}</h1></div>',
+			props:{
+			'productData':{},
+			}
+			});
+			new Vue({ 
+			'el': '#app',
+			'data': { 
+			product: { 
+			id:1,
+			name:'product 1'
+			},
+			//يمكنك تمرير اكثر من product
+			product2: { 
+			id:2,
+			name:'product 12'
+			},
+			//طريقه تمرير مصفوفه 
+			products:
+			[
+			{	id:3,
+			name:'product 3'
+			},
+			{	id:4,
+			name:'product 4'
+			},
+			]
+			}
+			});
+			</script>
+
+  <style>
+	 .completed{     
+ 	 }		
+</style>
+              </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

@@ -1,0 +1,78 @@
+  
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+<!--=============================css====================-->
+<!--
+<style>
+.error{ height:100px; width: 100px;}
+.blue{background: blue; }
+.red{background: red;} 
+</style>
+-->
+<!--=============================js======================-->
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index55  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+<!--                <link rel="stylesheet"   href="css/style.css">-->
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+   			<h1   :style="'color:red' ">56 vueJS  </h1>
+  			
+			<link href="css/style.css"/>
+
+<div id="app">
+
+  App Val: {{usersCount}}
+  <br/><br/>
+	<my-component v-on:updateval="updateUsersCount" :val="usersCount"></my-component>
+</div>
+
+<script type="text/javascript">
+	Vue.component('my-component', {
+		'template': '<div><button @click="clicked()">Click me!</button> Component Val: {{val}}</div>',
+		'props': ['val'],
+		'methods':{
+			clicked: function () {
+				this.$emit('updateval', this.val + 1);
+			}
+		}
+	});
+
+	new Vue({
+		'el':'#app',
+		data: {
+			usersCount: 5
+		},
+		methods: {
+			updateUsersCount: function(newVal){
+				this.usersCount = newVal;
+			}
+		}
+	});
+</script>
+
+       
+       
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

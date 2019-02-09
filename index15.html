@@ -1,0 +1,54 @@
+        <!DOCTYPE html>
+        <html>
+         <head>
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index15  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+         </head>
+         <body>
+            <div class="container">
+             <script src="https://unpkg.com/vue"></script>
+             <center>
+               <h1 style="color: red">15 vue shorthands </h1>
+
+<div id="app">
+<div v-bind:class="className"> test From v-bind:class <!--(v-bind:class="className"*)</div> 
+<!-- مباشر:class="className" بهذهء الشكل وكتابتتv-bind:classيمكننا ايضاء الاستغناء عن  -->
+<div :class="className"> test from :class <!--(:class="className"*)--> </div> 
+<!--ويكون بالنسبه لل اى دى مثل الكلاس -->
+<div :id="className"> test from :id<!--(*:id="className")--> </div>
+<!-- <button v-on:click="handle">show</button>-->
+<!-- @clickرمز  وكتابه  v-on:clickوويمكننا ايضاء حذف  -->
+<button v-on:click="handle">show</button>
+ </div>
+<!--=============================	======================-->
+<script type="text/javascript">
+
+new Vue({
+'el':'#app',
+'data':{
+className: 'test'
+},
+'methods':{
+handle:function(){
+alert('clicked');
+}
+}
+});
+</script>
+               </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script  	 src="js/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html>
+         </html>
+         </html>5

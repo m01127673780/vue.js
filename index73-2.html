@@ -1,0 +1,83 @@
+   
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+ 
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index73-2  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+<!--                <link rel="stylesheet"   href="css/style.css">-->
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+   			<h4  :style="'color:red' ">  73-2 vueJS  input  Modifiers <br>  المودفيرز مع التعامل مع الانبيت  </h4><hr>
+   										       
+ 			<link href="css/style.css"/>
+ 			
+ 				<!--  فى بعض الاحيان نحتاج لكود معين عند  حدوث تغير هذا -->
+ 			<div id="app">
+ 			<form @submit.prevent="saveForm">
+			<h6>فى بعض الاحيان نحتاج لكود معين عند </h6>
+			<!--    بعد الانتهاء من الكتابه فى الانبت والخروج منه مباشره يحدث حدث انت تريده كا مثل  جراب باستخدم الرت جاف اسكربت  كما سا اوضح لك فى المثال -->
+<!-- 			<label>Text</label> <input type="text" v-model="val" @change="valChange">  <br>-->
+ 			<!--    يمكنك استخدم اكثر من  ايفنت حدث  -->
+ 			<label>Mulit Events </label> <input type="text" v-model="val" @input="valInput" @change="valChange">  <br> 
+  			<!--    يمكنك استخدم   هذا ال ايفنت مع الكثير من ال انبيت   -->
+			<!--لا يمكنك اسخدم ايفتنت  انبيت مع هذا النوع -->
+ 			<select v-model="selectVal" @change="selectValChanged" >
+				<option value="1">one</option>
+				<option value="2">Tow</option>
+				
+			</select>
+			<button type="submit"> GO</button>
+			</form>
+			</div> 
+
+			<script type="text/javascript">
+			new Vue ({
+			'el':'#app',
+			data:{
+		 	val:"test",
+		 	'selectVal':"" 
+				
+			},
+			'methods':{
+				valChange:function(){
+					
+//					alert('valChange');
+					console.log('valChange');
+				},//  فى هذ الحاله تقوم بوضع كومه او فصله  ثم كتابه ال ايفنت او الفانكشن الثانيه
+				valInput : function(){
+					console.log('valInput');// ستلاحظ هنا عند كتابه كل حرف ستلاحظ انهو بيكتب فى ال كنصل  ايفنت   فل انبيت و عند الخروج من  ال  انبيت سيتم كتابه  شنج انبيت 
+				},
+				selectValChanged : function(){
+					console.log('selectValChanged');//     
+				},
+				saveForm : function(){
+					console.log('saveForm');//     
+				}
+			}
+			});
+			</script>
+
+          </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html> 

@@ -1,0 +1,76 @@
+  
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+<!--=============================css====================-->
+<!--
+<style>
+.error{ height:100px; width: 100px;}
+.blue{background: blue; }
+.red{background: red;} 
+</style>
+-->
+<!--=============================js======================-->
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index50  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+<!--                <link rel="stylesheet"   href="css/style.css">-->
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+   			<h1   :style="'color:red' ">53 vueJS  استحدم المكونات بشكل متدخل </h1>
+  			
+			<link href="css/style.css"/>
+			<!-- التطبيق عباره عن  زر وعن الطضط عليه يزيد كل مره ب 1  والمطلوب عمله على هيه كمبونان-->
+			<div id="app">
+			<buttoncounter></buttoncounter>
+			</div>
+			<script type="text/javascript">
+			//  اول حاجه بتكتب  فيو ز. كمبوننات وتفهح قوس وفيه  سنجل او دبي كودشن وتكب فيه  اسم العنصر الى انت عاهتستخدمه فى ال اتش تى ام ال وبعد كده فصله , و بعدين تفتح اوبجيجكت 
+			Vue.component('buttoncounter',{
+			//وبعد كده تضيف تمبلت وتكتب فيه العنصر ال  بكل خواصه  
+			template: '<button @click="increament() ">{{counter}}</button>',
+			//   ثم تقوم بانشاء داتا والدتا فى الكبوننات عباره عن فانكشن  وهذا الفانكشن تقوم بعمل ريتران لل   وبجكت و ايضا الريترن يكون عباره عن اوبجكت  وتفتح فيه القوس وتكيب الاسم الذى تريد المنداه بيه  ومعه القيمه الفترضيه
+			data :function(){
+			return{
+			counter: 0
+			}				// حتى الان انت قمت بعمل  الزرهر ولكن  لكى يعمل تقو بعم ميثود كالتالى 
+			},
+			// طريقه انشاء المثود  تقوم بكتابه  ميثودس ثم نقتطين ثم تفتح اقوس مجموعه   ثم تكتب  اسم س فانكشن   
+			methods: {
+			increament:function(){
+
+			//	  ثم تقوم بكتابه زاز . فانكشن الاسم الى احنا  هنسميه . 
+			this .counter ++;
+			}
+			}
+			});
+
+			new Vue({
+			'el':'#app',
+			data:{
+
+			},
+			});
+			</script>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="js/script.js"></script>
+         </html> 

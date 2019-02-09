@@ -1,0 +1,101 @@
+   
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+ 
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index61  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+<!--                <link rel="stylesheet"   href="css/style.css">-->
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+   			<h4  :style="'color:red' "> 68 & 72 vueJS  input Type in html <br>4 
+   										  التعامل مع انوع  ال انبيت فى ال مع  </h4>
+ 			<link href="css/style.css"/>
+<!-- طريقه التعمل مع ال عناصر الادخل  -->
+
+<div id="app">
+<label>Text</label><br>
+<input type="text" v-model="name"  >  <br>   
+<label>TextArae</label><br>
+<textarea v-model="name"></textarea><br>
+<hr>
+<!--فى حال تم الضغط على ال البل واردنا تفعيل  الرديو نقوم بعمل --> 
+<!--1تقوم بعمل  ايدى للانبيت 2 تقوم بكتابه ال اى دى فى البل فى فور كما هو وضح فى المثال اسفل -->
+<label  for="one">		Radio one   </label>  <input    id="one" type="radio" value="one" v-model="radioValue">  <br>
+<label  for="tow">		Radio tow   </label>  <input  id="tow" type="radio" value="tow" v-model="radioValue">    <br>
+<label  for="radio-tow">Second Radio</label>  <input  id="radio-tow" type="radio" value="tow" v-model="radioTow"><br>
+<!--استخدم الانبيت شك بوكس وهو يستخدم لوضع القيمه ترو او فلس فيه  false or true  -->
+<!-- او لاختيار متعداد فيتم اختيار اكثر من قيمه مجمعه فى مصفوفه-->
+<br><hr>
+<label  for="checkboxOne">checkboxOne</label>  <input  id="checkboxOne" type="checkbox" value="tow" v-model="checkboxOne"><br><br> 
+<label  for="checkboxOne">checkboxTowOne</label>     <input  id="checkboxTowOne"    type="checkbox"    value="one" v-model="checkboxTow"><br> 
+<label  for="checkboxTowTow">checkboxTowTow</label>  <input  id="checkboxTowTow" type="checkbox" value="tow" v-model="checkboxTow"><br>
+<hr>
+<label  for="select">select</label>  
+<!--     للتعامل مع ال  بشكل مبا شر يتم كتابه  فى  دش مودل ثم ال اسم الى هربط بيه-->
+<select  v-model="selectOne">
+<option value="one">one</option>
+<option value="tow">tow</option>
+</select>
+<br><br>
+<!--  فى حاله عند سلكت يحتوى على اكثر من خير -->
+<label  for="select"> Multi Select</label>  
+<select  v-model="selectTow" multiple>
+<option value="one">one</option>
+<option value="tow">tow</option>
+</select>
+<br><br>
+<hr>
+<!--  فى هاله عند سلكت يحتوى على اكثر من خير -->
+<label  for="select"> Select dynamic options</label>  
+<select  v-model="selectThree"  >
+<option v-for="option in selectThreeOptions " :value="option.value">{{option.label}}</option>
+</select>
+</div>
+
+<script type="text/javascript">
+new Vue ({
+'el':'#app',
+data:{
+name :"test",
+radioValue:"Tow",
+radioTow:"",
+checkboxOne: false ,                     // وكما تلا حظ نوع المتغير هنا بولين  كما تلاحظ فى الطريقه ال اولى  لا يتم اختيار فليو ولكن  تكون القيمه ترو او فلس
+//checkboxTow:[]                         //هذا مثال لمصفوفه  فارفه
+checkboxTow:["one","tow"],               //  وكما تلا حظ نوع المتغير هنا مصفوفه  سيتم التحديد على العناصر المختاره  فى حاله ارات وضع قيمه افترضيه
+selectOne:"",                            //    عباره عن متغير نصى
+//selectTow:[],                          //  فى الدتا يجب ان  تعرفه على انها مصفوفه  هذا مثال لمصفوفه  فارفه   
+selectTow:["one","tow"],                 //  وكما تلا حظ نوع المتغير هنا مصفوفه  سيتم التحديد على العناصر المختاره  فى حاله ارات وضع قيمه افترضيه
+selectThree:"",                          // selectThreeOptions  وكما تلاحظ هذا هو الذى يربط ال 
+selectThreeOptions: [  				 //  وكما تلا حظ نوع المتغير هنا مصفوفه  سيتم التحديد على العناصر المختاره  فى حاله ارات وضع قيمه افترضيه
+{'value': '1', 'label': 'First' },
+{'value': '2', 'label': 'Second'},
+{'value': '3', 'label': 'Third' },
+]
+}
+});
+</script>
+
+          </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html> 

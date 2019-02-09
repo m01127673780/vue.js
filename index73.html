@@ -1,0 +1,67 @@
+   
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+ 			<!--   فى حال ضغطت على الزر....>يحدث تغير بسن القمتين كما  هو موضح بالمثاال -->
+<!--			<button @click="active=!active"> Toggel</button>-->
+ 
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index73  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+<!--                <link rel="stylesheet"   href="css/style.css">-->
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     		
+				                <script type="text/javascript" src="js/vue.js"></script>
+          </head>
+         <body>
+            <div class="container">
+			<!--<script src="https://unpkg.com/vue"></script>-->
+			<center>
+ 			<br><br>
+   			<h4  :style="'color:red' ">  73 vueJS  input  Modifiers <br>  المودفيرز مع التعامل مع الانبيت  </h4><hr>
+   										       
+ 			<link href="css/style.css"/>
+ 			
+			<!-- طريقه التعمل مع ال عناصر الادخل  -->
+			<div id="app">
+			<h6> v-modelالاستخدم والطباعه بشكل مباشر بمعنى وانت بتكتب يكتب معك برضو</h6>
+			<label>Text</label> <input type="text" v-model="val"  >  <br>   <!--  الاستخدم والطباعه بشكل مباشر بمعنى وانت بتكتب يكتب معك برضو -->
+			<br> 
+			{{val}} 															  <!--  الاستخدم والطباعه بشكل مباشر بمعنى وانت بتكتب يكتب معك برضو	 فى المكن  ده  -->
+			<br><hr> <h6>الاستخدم والطباعه بشكل  غير مباشر بمعنى و عند النتهاء من الكتابه v-model.lazy </h6>
+			<label>Text</label> <input type="text" v-model.lazy="val"  ><br>      <!-- يتم اضافه مودفيرز .lazyالاستخدم والطباعه بشكل  غير مباشر بمعنى و عند النتهاء من الكتابه-->
+			<br><hr> <h6> اسناد القيمه بشكل رقم  وليس نص v-model.number</h6>
+			<label>number</label> <input type="text" v-model.number="num"  ><br>   <!-- اسناد القيمه بشكل رقم  وليس نص .numberالاستخدم والطباعه بشكل يتم اضافه مودفيرز  -->
+			<br><hr> <h6>  v-model.trimا سناد القيمه بشكل رقم  وليس نص</h6>
+			<label>text</label> <input type="text" v-model.trim="trimExample"> <br> <!-- يتم اضافه مودفيرز .trimالاستخدم  حذف المسفات  فى اول واخر الا انبست وعناصر الادخل  -->
+			<h6>  v-model.trim.lazyعلى سيبل المثال يمكنك استخدم اكثر من مودفيرز معنا  كما ساواضح لك ى المثال الاات</h6> 	 <!--  يمكنك اضافه اكثر من مودفيرز  والدمج معنا باستخدم . دوت ثم اسم ال مودفيرز المراد اختياره  -->
+			<br><br>
+			<label>Text</label> <input type="text" v-model.trim.lazy="val"  >  <br>   <!-- يتم اضافه مودفيرز .lazyالاستخدم والطباعه بشكل  غير مباشر بمعنى و عند النتهاء من الكتابه-->
+
+			</div> 
+
+			<script type="text/javascript">
+			new Vue ({
+			'el':'#app',
+			data:{
+			val:"mohamed",
+			num:0 ,
+			trimExample:""
+
+			}
+			});
+			</script>
+
+          </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html> 

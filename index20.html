@@ -1,0 +1,76 @@
+          <!DOCTYPE html>
+        <html>
+         <head>
+<!--
+           	 <i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			<i class="fa  fa-list-alt" style="color: black"> </i>
+-->
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index20   </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                     
+				
+				  
+					<style> .rect{ height:100px;width: 100px;}.blue{background: blue; } .red{background: red;}.has-border{
+				border: 1px solid #ccc;
+				}</style>
+ 
+				
+         </head>
+         <body>
+            <div class="container">
+			<script src="https://unpkg.com/vue"></script>
+			<center>
+			<h1 style="color: red">20 vue  Binding</h1>
+ 			<!-- -->
+
+			<div id="app">
+			<!-- الطريقه العاديه لاسند كلاسس من الفيو -->
+			<div  class="rect" v-bind:class="'red'"> </div>
+			<!--بهذا الطريقه يمكنك وضع كثر من متغير ووضع جمه ترو و فولس اواى متغير -->
+			<!--هو كتابه الكلاس ووضع فصله بعده ثم  الكلس لى بعده -->
+			<!-- الطريقه الاولى من خلال ال HTML-->
+			<!--<div class="rect"  :class= {blue:active,red:!active}  > </div>-->
+			<!-- الطريقه االثانيه من خلال ال فيو -->
+			<div class="rect"  :class=opjClass> </div><br>
+			<!--عند الضغط عليه نقوم بعمل تغير للقيمه  من تروى الىفولس-->
+			<button  @click="active=!active">Togglee</button> 
+			<!-- كما هو موضه فى المثال اسفل  يمكنك ايضا عمل واستخدم كمبيتد-->
+			<!-- كما هو موضه فى المثال اسفل لا يمكنك استخدم الكلاس الذى يحتوى على علامه - داش ال اذ وضعته فى ''دبل كودشن كا هذ-->
+			
+			</div>
+			<!--=============================css====================-->
+		
+			<!--=============================js======================-->
+			<script type="text/javascript">
+			new Vue({
+			'el':'#app',
+			'data':{
+			active:true
+			},  
+			//  الطريقه الثانيهمن خلال ال فيو   
+			'computed':{
+			opjClass:function(){
+			return {blue:this.active,red:!this.active,'has-border':true} 
+			}
+			}
+
+			});
+			</script>
+           
+               </center>
+            </div>
+        </body>
+      
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script  	 src="js/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html>
+ 

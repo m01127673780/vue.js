@@ -1,0 +1,65 @@
+         <!DOCTYPE html>
+        <html>
+         <head>
+            	<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <title> index19  </title>
+
+            <link rel="stylesheet"   href="css/bootstrap.min.css">
+                <link rel="stylesheet"   href="css/style.css">
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+         </head>
+         <body>
+            <div class="container">
+			<script src="https://unpkg.com/vue"></script>
+			<center>
+			<h1 style="color: red">19 vue wtch</h1>
+
+			<div id="app">
+ 			<!-- -->
+ 			<h1>Title Example <i class="fa  fa-list-alt" style="color: black"> </i></h1>
+				<!--  يمكننا هذا من الخصايه بعمل مرقبه للمتغير ما وعند تغيره نقوم بعمل اجرات او عمليه نريده   wtch-->
+				<!--  للتتوضيح نقم باستخدم مثال فى حال قام المستخدم بالضغط على زر ليك يازد 1 وحاله ضغطه عليه مره ثانيه ين-->
+			<span @click="liked=! liked":class="className" style="font-weight: bold; color: red;">{{likes}}
+			<i class="fa fa-thumbs-o-up" style="color: black"> </i>
+  			</span>
+   			<!---->
+			<!--<button  @click="x = 'x was changed'">change</button> -->
+			</div> 
+			<!--=============================	======================-->
+			<script type="text/javascript">
+			new Vue({
+			'el':'#app',
+			'data':{
+			liked:false,
+  			likes:5
+			},
+				'computed':{
+				className:function(){
+					return (this.liked)?'liked':'';
+				}, 
+				},
+				//مع استخدم الخاصيه وتش لازم  يكون ما يوجد بداخله موجد مسبقا فى الداتا للعمل عليه ومرقبته
+				watch:{
+				liked: function(value){
+					if(value)
+					this.likes ++;
+					else{
+					this.likes --;
+
+					}
+				}	
+				}
+			});
+ 			</script>
+               </center>
+            </div>
+        </body>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!--	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script  	 src="js/vue.js"></script>
+        <script src="js/script.js"></script>
+         </html>
+ 
